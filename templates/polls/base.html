@@ -106,14 +106,102 @@
   footer p a:hover {
     color: white;
   }
+  
+  body {font-family: Arial, Helvetica, sans-serif;}
+  * {box-sizing: border-box;}
+  /* Button used to open the chat form - fixed at the bottom of the page */
+  .open-button {
+    background-color: rgb(255, 23, 23);
+    color: rgb(30, 132, 139);
+    padding: 20px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    position: fixed;
+    z-index: 2;
+    bottom: 16px;
+    right: 20px;
+    border: darksalmon;
+
+  }
+  
+  
+  /* The popup chat - hidden by default */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 90;
+    margin-bottom: -2.4%;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 320px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width textarea */
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 2px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: rgb(151, 39, 39);
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  
+
 </style>
 
 <body style="bg-color:#ff9797;">
 
+  <button class="open-button" onclick="openForm()"><b>Hi👋</b></button>
+
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h4>UBBOT🤖</h4>
+      <iframe src='https://webchat.botframework.com/embed/UBBbot7?s=WXKirTKc48Q.RnBXimVKXX-AqD4uysBR2AIGAFJp4c02iWdr1ngOZ3I'  style='min-width: 20px;  min-height: 500px;'></iframe>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
   <div class="container-fluid bg-danger">
     <div class="p-4 ">
       <div class="text-center text-white fs-2">
-        Unified Blood Bank System
+        <b>UNIFIED BLOOD BANK SYSTEM</b>
       </div>
     </div>
   </div>
@@ -165,6 +253,7 @@
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
         aria-label="Slide 3"></button>
     </div>
+    
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{% static 'images/slide1.jpg' %}" class="d-block w-100 h-100" alt="...">
@@ -229,6 +318,7 @@
         </div>
       </div>
     </div>
+    
     <div class="row justify-content-between margin">
       <div class="col-4">
         <div class="shadow-lg width-height">
@@ -250,17 +340,29 @@
     <footer class="p-3 text-center bg-danger">
       <p>Created By
         <a>Job's</a>
-        | This Site is Open Source</a>
+        </a>
       <p>
     </footer>
   </div>
+
+  
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
 
   <script src="{% static 'js/all.min.js' %}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
+ 
+  
 
 </body>
 
