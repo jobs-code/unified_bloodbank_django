@@ -1,35 +1,19 @@
 # unified_bloodbank_django
 unified bloodbank webapp using django
+as final project in Future Reday talent Virtual internship
+project demo video:
+https://www.loom.com/share/8914dd82cce34fadb24c4372aae8330d
+
+## Services used
+Azure SQLServer
+Azure Sql Database
+Azure app service (for hosting)
+Azure bot service(for bot)
+Azure LUIS(language understand)
+Azure QnA maker
+
 ## Unified-Blood-Bank-Management-System
 
-Admin credentials 
-user:admin
-pass:admin@root
-### How to run a App manually
-
-### Create a virtual environment 
-
-Download python & pip
-
-### download requirement file
-
-```$ pip install -r requirement.txt```
-
-then 
-
-```$ python manage.py migrate```
-
-```$ python manage.py createsuperuser```
-
-### start the app
-
-```$ python manage.py runserver```
-
-Open browser, <http://localhost:8000>
-
-### stop the app
-
-           Ctrl+C
 
 ### Walk through the web app
 Homepage
@@ -60,3 +44,34 @@ to reach out
 ## UBBOT
 Bot that clarify all blood donation related queries.
 ![image](https://user-images.githubusercontent.com/39452651/167288953-27ecc350-245d-4a69-98fc-7aa48e67b549.png)
+
+Admin credentials 
+user:admin
+pass:admin@root
+
+### How to run a App manually
+
+### Create a virtual environment 
+
+Download python & pip
+
+### download requirement file
+
+```$ pip install -r requirement.txt```
+
+then 
+
+```$ python manage.py migrate```
+
+```$ python manage.py createsuperuser```
+
+### start the app
+
+```$ python manage.py runserver```
+
+Open browser, <http://localhost:8000>
+
+### stop the app
+
+           Ctrl+C
+
