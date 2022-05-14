@@ -1,8 +1,8 @@
 # unified_bloodbank_django
 unified bloodbank webapp using django
 as final project in Future Reday talent Virtual internship
-project demo video:
-https://www.loom.com/share/8914dd82cce34fadb24c4372aae8330d
+project deploying and demo video:
+https://youtu.be/_FhCsv8jAPE
 
 ## Services used
 Azure SQLServer
@@ -13,7 +13,26 @@ Azure LUIS(language understand)
 Azure QnA maker
 
 ## Unified-Blood-Bank-Management-System
+## Website deployment details
+In azure create resource group for webapp deployment 
+![image](https://user-images.githubusercontent.com/39452651/168438978-5a750c7f-082f-4713-a2a0-cd3381ddf9cc.png)
+(Here i created azure app service and azure sql server and database for storing data)
 
+after creating the resources go to the app service and select deployment center and login with github and select the project repo to deploy.
+![image](https://user-images.githubusercontent.com/39452651/168439122-050a4554-c7bd-4275-b55a-462502969c4d.png)
+(It will create new workflow file and start deploying)
+
+After deployment change the database credentials for that go to azure sql database that created before and get the ip , port , username & password change it in your source code.
+![image](https://user-images.githubusercontent.com/39452651/168439253-0d737be5-4bbc-4c23-8777-a7c6c4db6c3c.png)
+
+test the web app by clicking on browse button in app service.
+### for bot deployment create bot in bot framework composer
+create bot in bot framework composer and sigin with you azure account and create profile for deploying
+![image](https://user-images.githubusercontent.com/39452651/168439319-ed3a0596-ffe9-4051-9965-6632919310fe.png)
+then you can directly deploy the bot to azure and deployment get the secret key and embed code to integrate bot into our app for that locate to the channels section select web chat there you can see the secret also add that into your source code.
+![image](https://user-images.githubusercontent.com/39452651/168439464-e9f11f81-11ac-47a6-a29c-a4baf472203b.png)
+
+That's how you can deploy and integrate your web app in microsoft azure
 
 ### Walk through the web app
 Homepage
@@ -49,29 +68,4 @@ Admin credentials
 user:admin
 pass:admin@root
 
-### How to run a App manually
-
-### Create a virtual environment 
-
-Download python & pip
-
-### download requirement file
-
-```$ pip install -r requirement.txt```
-
-then 
-
-```$ python manage.py migrate```
-
-```$ python manage.py createsuperuser```
-
-### start the app
-
-```$ python manage.py runserver```
-
-Open browser, <http://localhost:8000>
-
-### stop the app
-
-           Ctrl+C
 
