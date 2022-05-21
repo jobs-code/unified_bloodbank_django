@@ -1,7 +1,7 @@
 # unified_bloodbank_django
 unified bloodbank webapp using django
-as final project in Future Reday talent Virtual internship
-project deploying and demo video:
+
+# project deploying and demo video:
 https://youtu.be/_FhCsv8jAPE
 
 ## Services used
